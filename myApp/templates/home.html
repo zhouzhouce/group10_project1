@@ -1,0 +1,54 @@
+<!--
+<form action = "" method="post">
+    {% csrf_token %}
+    {{form}}
+    <input  type="submit" value="Submit">
+</form>
+-->
+
+<!--
+<form action = "" method = "get">
+	<label for="your_name">Your name: </label>
+	<input id="your_name" type="text" name="your_name">
+	<input type="submit" value="OK">
+</form>
+-->
+
+<!--
+<form action = "" method = "POST">
+	{% csrf_token %}
+	<label for="your_name">Your name: </label>
+	<input id="your_name" type="text" name="your_name">
+	<input type="submit" value="OK">
+</form>
+-->
+
+<!--
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+</form>
+-->
+
+<!--
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ formset.as_p }}
+    <input type="submit" value="Submit">
+</form>
+-->
+
+<form method="POST" enctype="multipart/form-data">
+	
+
+	{{ formset.management_data }}
+
+
+	{% csrf_token %}
+
+	
+	{{ formset.as_p }}
+	
+	<input type="submit" value="Submit">
+</form>
